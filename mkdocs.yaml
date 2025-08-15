@@ -1,0 +1,121 @@
+site_name: YAML.com
+site_description: YAML supports your infrastructure. We support YAML.
+site_author: YAML LLC
+site_url: https://yaml.com
+
+# Repository
+repo_name: yaml/yaml.com
+repo_url: https://github.com/yaml/yaml.com
+edit_uri: edit/main/docs/
+
+docs_dir: src
+
+watch:
+- theme
+- css
+- js
+
+# Theme
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  custom_dir: theme
+  palette:
+  - scheme: default
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/brightness-auto
+      name: Switch to dark mode
+  - scheme: slate
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/brightness-7
+      name: Switch to light mode
+  features:
+  - navigation.tabs
+  - navigation.sections
+  - navigation.expand
+  - navigation.top
+  - search.highlight
+  - search.share
+  - content.code.copy
+  - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Navigation
+nav:
+# - Home: index.md
+- About YAML: about.md
+- Resources: resources.md
+- Sponsorship:
+  - Overview: sponsorship/index.md
+  - Current Sponsors: sponsorship/sponsors.md
+  - Become a Sponsor: sponsorship/join.md
+- Documentation:
+  - Specification: docs/specification.md
+  - Implementations: docs/implementations.md
+  - YAMLScript: docs/yamlscript.md
+- Community: community.md
+- Contact: contact.md
+
+# Plugins
+plugins:
+- search
+# - social  # Disabled due to missing logo
+
+# Extensions
+markdown_extensions:
+- abbr
+- admonition
+- attr_list
+- def_list
+- footnotes
+- md_in_html
+- toc:
+    permalink: true
+- pymdownx.arithmatex:
+    generic: true
+- pymdownx.betterem:
+    smart_enable: all
+- pymdownx.caret
+- pymdownx.details
+- pymdownx.emoji:
+    emoji_generator: +!!python/name:material.extensions.emoji.to_svg
+- pymdownx.highlight:
+    anchor_linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.keys
+- pymdownx.magiclink
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.snippets:
+    check_paths: true
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: +!!python/name:pymdownx.superfences.fence_code_format
+- pymdownx.tabbed
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tilde
+
+# Extra CSS and JS
+extra_css:
+- css/extra.css
+
+extra_javascript:
+- js/mathjax.js
+- https://polyfill.io/v3/polyfill.min.js?features=es6
+- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Copyright
+copyright: Copyright &copy; 2025 YAML LLC
